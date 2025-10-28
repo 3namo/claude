@@ -428,7 +428,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initStatistics();
 
     // コンソールに統計情報を出力
-    console.log('津田沼駅周辺マップが初期化されました');
+    console.log('総武線沿線マップが初期化されました');
     console.log('施設総数:', tsudanumaData.facilities.length);
     console.log('カテゴリ別施設数:', getFacilityCountByCategory());
 });

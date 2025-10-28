@@ -39,16 +39,19 @@ header p {
 
 /* サイドバー */
 .sidebar {
-    width: 300px;
+    width: 380px;
     background: white;
     overflow-y: auto;
+    overflow-x: hidden;
     box-shadow: 2px 0 10px rgba(0,0,0,0.1);
     z-index: 1000;
 }
 
 .panel {
-    padding: 1.5rem;
+    padding: 1.2rem;
     border-bottom: 1px solid #e0e0e0;
+    overflow-x: hidden;
+    word-wrap: break-word;
 }
 
 .panel h2 {
@@ -200,6 +203,12 @@ footer a:hover {
 }
 
 /* レスポンシブデザイン */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 320px;
+    }
+}
+
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -222,6 +231,15 @@ footer a:hover {
     .map-info {
         font-size: 0.75rem;
         padding: 0.4rem 0.8rem;
+    }
+
+    .age-label {
+        width: 120px;
+        font-size: 0.7rem;
+    }
+
+    .stat-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -410,9 +428,10 @@ footer a:hover {
 }
 
 .age-label {
-    width: 140px;
+    width: 170px;
     font-size: 0.75rem;
     color: #666;
+    flex-shrink: 0;
 }
 
 .age-progress {

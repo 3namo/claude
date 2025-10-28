@@ -1,10 +1,10 @@
-// 津田沼駅周辺の施設データ
+// 総武線沿線（千葉〜市川）の施設データ
 const tsudanumaData = {
-    // 中心座標（津田沼駅）
+    // 中心座標（総武線沿線の中央付近）
     center: {
-        lat: 35.6916,
-        lng: 140.0211,
-        zoom: 15
+        lat: 35.6800,
+        lng: 140.0000,
+        zoom: 12
     },
 
     // 施設データ
@@ -296,6 +296,444 @@ const tsudanumaData = {
             hours: "24時間開放",
             phone: "047-451-1151（市役所）",
             website: "https://www.city.narashino.lg.jp/"
+        },
+
+        // ========== 千葉駅エリア ==========
+        {
+            id: 22,
+            name: "千葉駅（JR総武線）",
+            category: "station",
+            lat: 35.6073,
+            lng: 140.1063,
+            description: "千葉県の中心駅。総武線、総武快速線、成田線、外房線、内房線が乗り入れ。",
+            icon: "🚉",
+            address: "千葉県千葉市中央区新千葉1丁目",
+            hours: "始発〜終電",
+            phone: "043-222-0145",
+            website: "https://www.jreast.co.jp/"
+        },
+        {
+            id: 23,
+            name: "ペリエ千葉",
+            category: "shopping",
+            lat: 35.6075,
+            lng: 140.1065,
+            description: "千葉駅直結の大型駅ビル。ファッション、雑貨、グルメが充実。",
+            icon: "🏬",
+            address: "千葉県千葉市中央区新千葉1-1-1",
+            hours: "10:00〜21:00（店舗により異なる）",
+            phone: "043-227-8201",
+            website: "https://www.perie.co.jp/chiba/"
+        },
+        {
+            id: 24,
+            name: "そごう千葉店",
+            category: "shopping",
+            lat: 35.6089,
+            lng: 140.1075,
+            description: "老舗百貨店。品質の高い商品とサービスを提供。",
+            icon: "🛍️",
+            address: "千葉県千葉市中央区新町1000",
+            hours: "10:00〜20:00",
+            phone: "043-245-2111",
+            website: "https://www.sogo-seibu.jp/chiba/"
+        },
+        {
+            id: 25,
+            name: "千葉市役所",
+            category: "public",
+            lat: 35.6063,
+            lng: 140.1124,
+            description: "千葉市の行政機関。市民サービスを提供。",
+            icon: "🏛️",
+            address: "千葉県千葉市中央区千葉港1-1",
+            hours: "月〜金 8:30〜17:30",
+            phone: "043-245-5111",
+            website: "https://www.city.chiba.jp/"
+        },
+        {
+            id: 26,
+            name: "千葉公園",
+            category: "park",
+            lat: 35.6178,
+            lng: 140.1189,
+            description: "広大な都市公園。ボート池や日本庭園があります。",
+            icon: "🌳",
+            address: "千葉県千葉市中央区弁天3-1-1",
+            hours: "24時間開放",
+            phone: "043-251-5103",
+            website: "https://www.city.chiba.jp/"
+        },
+
+        // ========== 西千葉駅エリア ==========
+        {
+            id: 27,
+            name: "西千葉駅（JR総武線）",
+            category: "station",
+            lat: 35.6233,
+            lng: 140.1064,
+            description: "千葉大学の最寄り駅。学生街として栄えています。",
+            icon: "🚉",
+            address: "千葉県千葉市中央区春日2丁目",
+            hours: "始発〜終電",
+            phone: "043-222-0145",
+            website: "https://www.jreast.co.jp/"
+        },
+        {
+            id: 28,
+            name: "千葉大学 西千葉キャンパス",
+            category: "education",
+            lat: 35.6269,
+            lng: 140.1036,
+            description: "国立大学法人千葉大学の本部キャンパス。",
+            icon: "🎓",
+            address: "千葉県千葉市稲毛区弥生町1-33",
+            hours: "平日 8:30〜17:15",
+            phone: "043-251-1111",
+            website: "https://www.chiba-u.ac.jp/"
+        },
+
+        // ========== 稲毛駅エリア ==========
+        {
+            id: 29,
+            name: "稲毛駅（JR総武線）",
+            category: "station",
+            lat: 35.6331,
+            lng: 140.1059,
+            description: "快速停車駅。住宅街と商業エリアが共存する地域。",
+            icon: "🚉",
+            address: "千葉県千葉市稲毛区稲毛東3丁目",
+            hours: "始発〜終電",
+            phone: "043-222-0145",
+            website: "https://www.jreast.co.jp/"
+        },
+        {
+            id: 30,
+            name: "ペリエ稲毛",
+            category: "shopping",
+            lat: 35.6332,
+            lng: 140.1060,
+            description: "稲毛駅直結のショッピングセンター。",
+            icon: "🏬",
+            address: "千葉県千葉市稲毛区稲毛東3-19-11",
+            hours: "10:00〜21:00",
+            phone: "043-307-8201",
+            website: "https://www.perie.co.jp/inage/"
+        },
+        {
+            id: 31,
+            name: "稲毛浅間神社",
+            category: "public",
+            lat: 35.6398,
+            lng: 140.0958,
+            description: "歴史ある神社。初詣や祭りで賑わいます。",
+            icon: "⛩️",
+            address: "千葉県千葉市稲毛区稲毛1-15-10",
+            hours: "参拝自由",
+            phone: "043-245-7777",
+            website: "https://www.sengenjinja.info/"
+        },
+
+        // ========== 新検見川駅エリア ==========
+        {
+            id: 32,
+            name: "新検見川駅（JR総武線）",
+            category: "station",
+            lat: 35.6462,
+            lng: 140.0867,
+            description: "住宅地に位置する駅。地域密着型の商店街がある。",
+            icon: "🚉",
+            address: "千葉県千葉市花見川区南花園2丁目",
+            hours: "始発〜終電",
+            phone: "043-222-0145",
+            website: "https://www.jreast.co.jp/"
+        },
+        {
+            id: 33,
+            name: "イオン新検見川店",
+            category: "shopping",
+            lat: 35.6455,
+            lng: 140.0875,
+            description: "地域密着型のスーパーマーケット。",
+            icon: "🏬",
+            address: "千葉県千葉市花見川区花園1-8-1",
+            hours: "9:00〜22:00",
+            phone: "043-250-3011",
+            website: "https://www.aeon.com/"
+        },
+
+        // ========== 幕張駅エリア ==========
+        {
+            id: 34,
+            name: "幕張駅（JR総武線）",
+            category: "station",
+            lat: 35.6577,
+            lng: 140.0506,
+            description: "幕張エリアの玄関口。幕張メッセへのアクセス拠点。",
+            icon: "🚉",
+            address: "千葉県千葉市花見川区幕張町5丁目",
+            hours: "始発〜終電",
+            phone: "043-222-0145",
+            website: "https://www.jreast.co.jp/"
+        },
+        {
+            id: 35,
+            name: "幕張メッセ",
+            category: "public",
+            lat: 35.6481,
+            lng: 140.0343,
+            description: "日本最大級のコンベンション施設。展示会やイベントを開催。",
+            icon: "🏢",
+            address: "千葉県千葉市美浜区中瀬2-1",
+            hours: "イベントにより異なる",
+            phone: "043-296-0001",
+            website: "https://www.m-messe.co.jp/"
+        },
+
+        // ========== 幕張本郷駅エリア ==========
+        {
+            id: 36,
+            name: "幕張本郷駅（JR総武線）",
+            category: "station",
+            lat: 35.6699,
+            lng: 140.0539,
+            description: "京成線も乗り入れる駅。住宅街の中心。",
+            icon: "🚉",
+            address: "千葉県千葉市花見川区幕張本郷1丁目",
+            hours: "始発〜終電",
+            phone: "043-222-0145",
+            website: "https://www.jreast.co.jp/"
+        },
+        {
+            id: 37,
+            name: "ワンズモール",
+            category: "shopping",
+            lat: 35.6705,
+            lng: 140.0550,
+            description: "地域最大級のショッピングモール。専門店が多数入居。",
+            icon: "🏬",
+            address: "千葉県千葉市花見川区幕張本郷2-25-1",
+            hours: "10:00〜21:00",
+            phone: "043-350-9000",
+            website: "https://www.ones-mall.jp/"
+        },
+
+        // ========== 船橋駅エリア ==========
+        {
+            id: 38,
+            name: "船橋駅（JR総武線）",
+            category: "station",
+            lat: 35.6954,
+            lng: 139.9848,
+            description: "船橋市の中心駅。総武線、総武快速線、東武線が乗り入れ。",
+            icon: "🚉",
+            address: "千葉県船橋市本町7丁目",
+            hours: "始発〜終電",
+            phone: "047-424-2727",
+            website: "https://www.jreast.co.jp/"
+        },
+        {
+            id: 39,
+            name: "東武百貨店 船橋店",
+            category: "shopping",
+            lat: 35.6958,
+            lng: 139.9845,
+            description: "船橋駅直結の百貨店。幅広い商品を取り扱い。",
+            icon: "🛍️",
+            address: "千葉県船橋市本町7-1-1",
+            hours: "10:00〜20:00",
+            phone: "047-425-2211",
+            website: "https://www.tobu-dept.jp/funabashi/"
+        },
+        {
+            id: 40,
+            name: "シャポー船橋",
+            category: "shopping",
+            lat: 35.6955,
+            lng: 139.9850,
+            description: "駅ナカ商業施設。食品や雑貨が充実。",
+            icon: "🏢",
+            address: "千葉県船橋市本町7-1-1",
+            hours: "10:00〜21:00",
+            phone: "047-460-0222",
+            website: "https://www.shapo-funabashi.com/"
+        },
+        {
+            id: 41,
+            name: "船橋市役所",
+            category: "public",
+            lat: 35.6941,
+            lng: 139.9832,
+            description: "船橋市の行政機関。各種手続きが可能。",
+            icon: "🏛️",
+            address: "千葉県船橋市湊町2-10-25",
+            hours: "月〜金 9:00〜17:00",
+            phone: "047-436-2111",
+            website: "https://www.city.funabashi.lg.jp/"
+        },
+        {
+            id: 42,
+            name: "船橋アリーナ",
+            category: "public",
+            lat: 35.7021,
+            lng: 139.9937,
+            description: "スポーツイベントやコンサートが開催される多目的施設。",
+            icon: "🏟️",
+            address: "千葉県船橋市習志野台7-5-1",
+            hours: "イベントにより異なる",
+            phone: "047-461-5611",
+            website: "https://www.funabashi-arena.jp/"
+        },
+
+        // ========== 西船橋駅エリア ==========
+        {
+            id: 43,
+            name: "西船橋駅（JR総武線）",
+            category: "station",
+            lat: 35.7095,
+            lng: 139.9589,
+            description: "総武線、武蔵野線、東西線、東葉高速線が乗り入れるターミナル駅。",
+            icon: "🚉",
+            address: "千葉県船橋市西船4丁目",
+            hours: "始発〜終電",
+            phone: "047-424-2727",
+            website: "https://www.jreast.co.jp/"
+        },
+        {
+            id: 44,
+            name: "東武ストア 西船橋店",
+            category: "shopping",
+            lat: 35.7098,
+            lng: 139.9592,
+            description: "駅直結のスーパーマーケット。日常の買い物に便利。",
+            icon: "🏬",
+            address: "千葉県船橋市西船4-27-7",
+            hours: "10:00〜22:00",
+            phone: "047-495-1711",
+            website: "https://www.tobustore.co.jp/"
+        },
+
+        // ========== 下総中山駅エリア ==========
+        {
+            id: 45,
+            name: "下総中山駅（JR総武線）",
+            category: "station",
+            lat: 35.7189,
+            lng: 139.9334,
+            description: "中山法華経寺の最寄り駅。京成線も利用可能。",
+            icon: "🚉",
+            address: "千葉県船橋市本中山3丁目",
+            hours: "始発〜終電",
+            phone: "047-424-2727",
+            website: "https://www.jreast.co.jp/"
+        },
+        {
+            id: 46,
+            name: "中山法華経寺",
+            category: "public",
+            lat: 35.7235,
+            lng: 139.9312,
+            description: "日蓮宗の大本山。国宝や重要文化財を多数所蔵。",
+            icon: "⛩️",
+            address: "千葉県市川市中山2-10-1",
+            hours: "参拝自由",
+            phone: "047-334-3433",
+            website: "https://www.hokekyoji.com/"
+        },
+
+        // ========== 本八幡駅エリア ==========
+        {
+            id: 47,
+            name: "本八幡駅（JR総武線）",
+            category: "station",
+            lat: 35.7222,
+            lng: 139.9255,
+            description: "市川市の中心駅。都営新宿線も乗り入れ。",
+            icon: "🚉",
+            address: "千葉県市川市八幡3丁目",
+            hours: "始発〜終電",
+            phone: "047-332-2145",
+            website: "https://www.jreast.co.jp/"
+        },
+        {
+            id: 48,
+            name: "シャポー本八幡",
+            category: "shopping",
+            lat: 35.7224,
+            lng: 139.9258,
+            description: "駅直結のショッピングセンター。食品や雑貨が充実。",
+            icon: "🏢",
+            address: "千葉県市川市八幡3-3-1",
+            hours: "10:00〜21:00",
+            phone: "047-370-0222",
+            website: "https://www.shapo-motoyawata.com/"
+        },
+        {
+            id: 49,
+            name: "ニッケコルトンプラザ",
+            category: "shopping",
+            lat: 35.7188,
+            lng: 139.9177,
+            description: "大型ショッピングモール。映画館やレストラン街も併設。",
+            icon: "🏬",
+            address: "千葉県市川市鬼高1-1-1",
+            hours: "10:00〜21:00（店舗により異なる）",
+            phone: "047-378-3551",
+            website: "https://www.nikke-coltonplaza.jp/"
+        },
+        {
+            id: 50,
+            name: "市川市役所",
+            category: "public",
+            lat: 35.7215,
+            lng: 139.9306,
+            description: "市川市の行政機関。市民サービスを提供。",
+            icon: "🏛️",
+            address: "千葉県市川市南八幡2-20-2",
+            hours: "月〜金 8:45〜17:15",
+            phone: "047-334-1111",
+            website: "https://www.city.ichikawa.lg.jp/"
+        },
+
+        // ========== 市川駅エリア ==========
+        {
+            id: 51,
+            name: "市川駅（JR総武線）",
+            category: "station",
+            lat: 35.7222,
+            lng: 139.9308,
+            description: "市川市の代表駅。京成線市川真間駅へのアクセスも便利。",
+            icon: "🚉",
+            address: "千葉県市川市市川1丁目",
+            hours: "始発〜終電",
+            phone: "047-332-2145",
+            website: "https://www.jreast.co.jp/"
+        },
+        {
+            id: 52,
+            name: "シャポー市川",
+            category: "shopping",
+            lat: 35.7224,
+            lng: 139.9310,
+            description: "市川駅直結のショッピング施設。",
+            icon: "🏢",
+            address: "千葉県市川市市川1-4-10",
+            hours: "10:00〜21:00",
+            phone: "047-322-0222",
+            website: "https://www.shapo-ichikawa.com/"
+        },
+        {
+            id: 53,
+            name: "市川市文化会館",
+            category: "public",
+            lat: 35.7198,
+            lng: 139.9295,
+            description: "コンサートや演劇が開催される文化施設。",
+            icon: "🎭",
+            address: "千葉県市川市大和田1-1-5",
+            hours: "9:00〜22:00",
+            phone: "047-379-5111",
+            website: "https://www.tekona.net/bunka/"
         }
     ]
 };
