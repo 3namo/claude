@@ -39,6 +39,13 @@
             </div>
 
             <div class="panel">
+                <h2>ナビゲーション</h2>
+                <button id="location-btn" class="location-button" onclick="showCurrentLocation()">
+                    📍 現在地を表示
+                </button>
+            </div>
+
+            <div class="panel">
                 <h2>施設カテゴリ</h2>
                 <div class="category-filters">
                     <label>
@@ -64,6 +71,10 @@
                     <label>
                         <input type="checkbox" class="category-filter" value="park" checked>
                         公園
+                    </label>
+                    <label>
+                        <input type="checkbox" class="category-filter" value="disaster" checked>
+                        防災施設
                     </label>
                 </div>
             </div>

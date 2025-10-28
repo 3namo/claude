@@ -4,6 +4,8 @@ let baseLayers = {};
 let currentBaseLayer;
 let markers = [];
 let markerLayer;
+let currentLocationMarker = null;
+let userLocation = null;
 
 // 地図の初期化
 function initMap() {
@@ -70,18 +72,19 @@ function addFacilityMarkers() {
         // マーカーの作成
         const marker = L.marker([facility.lat, facility.lng], { icon: customIcon });
 
-        // ポップアップの内容
-        const popupContent = `
-            <div class="facility-popup">
-                <h3>${facility.icon} ${facility.name}</h3>
-                <p>${facility.description}</p>
-                <span class="facility-category" style="background-color: ${category.color}">
-                    ${category.name}
-                </span>
-            </div>
-        `;
+        // 津田沼駅からの距離を計算
+        const distanceFromStation = calculateDistance(
+            tsudanumaData.center.lat,
+            tsudanumaData.center.lng,
+            facility.lat,
+            facility.lng
+        );
+        const walkingTime = Math.ceil(distanceFromStation / 80); // 徒歩80m/分で計算
 
-        marker.bindPopup(popupContent);
+        // ポップアップの内容
+        const popupContent = createPopupContent(facility, category, distanceFromStation, walkingTime);
+
+        marker.bindPopup(popupContent, { maxWidth: 350 });
 
         // マーカーにカテゴリ情報を保存
         marker.facilityCategory = facility.category;
@@ -172,6 +175,103 @@ function resetMapView() {
     map.setView([tsudanumaData.center.lat, tsudanumaData.center.lng], tsudanumaData.center.zoom);
 }
 
+// ポップアップコンテンツの生成
+function createPopupContent(facility, category, distanceFromStation, walkingTime) {
+    let content = `
+        <div class="facility-popup">
+            <h3 style="margin: 0 0 10px 0; color: ${category.color};">
+                ${facility.icon} ${facility.name}
+            </h3>
+            <p style="margin: 5px 0; color: #666; font-size: 0.9em;">
+                ${facility.description}
+            </p>
+    `;
+
+    // 住所
+    if (facility.address) {
+        content += `
+            <div style="margin: 10px 0; padding: 8px; background: #f5f5f5; border-radius: 4px;">
+                <strong style="font-size: 0.85em;">📍 住所</strong><br>
+                <span style="font-size: 0.85em;">${facility.address}</span>
+            </div>
+        `;
+    }
+
+    // 営業時間
+    if (facility.hours) {
+        content += `
+            <div style="margin: 8px 0;">
+                <strong style="font-size: 0.85em;">🕒 営業時間</strong><br>
+                <span style="font-size: 0.85em;">${facility.hours}</span>
+            </div>
+        `;
+    }
+
+    // 電話番号
+    if (facility.phone) {
+        content += `
+            <div style="margin: 8px 0;">
+                <strong style="font-size: 0.85em;">📞 電話</strong><br>
+                <a href="tel:${facility.phone}" style="font-size: 0.85em; color: #1976d2;">${facility.phone}</a>
+            </div>
+        `;
+    }
+
+    // ウェブサイト
+    if (facility.website) {
+        content += `
+            <div style="margin: 8px 0;">
+                <strong style="font-size: 0.85em;">🌐 ウェブサイト</strong><br>
+                <a href="${facility.website}" target="_blank" style="font-size: 0.85em; color: #1976d2;">公式サイトを開く</a>
+            </div>
+        `;
+    }
+
+    // 津田沼駅からの距離と時間
+    content += `
+        <div style="margin: 10px 0; padding: 8px; background: #e3f2fd; border-radius: 4px; border-left: 3px solid ${category.color};">
+            <strong style="font-size: 0.85em;">🚶 津田沼駅から</strong><br>
+            <span style="font-size: 0.85em;">
+                直線距離: ${distanceFromStation < 1000 ? Math.round(distanceFromStation) + 'm' : (distanceFromStation / 1000).toFixed(2) + 'km'}
+                / 徒歩約${walkingTime}分
+            </span>
+        </div>
+    `;
+
+    // ユーザーの現在地からの距離（取得済みの場合）
+    if (userLocation) {
+        const distanceFromUser = calculateDistance(
+            userLocation.lat,
+            userLocation.lng,
+            facility.lat,
+            facility.lng
+        );
+        const walkingTimeFromUser = Math.ceil(distanceFromUser / 80);
+
+        content += `
+            <div style="margin: 8px 0; padding: 8px; background: #fff3e0; border-radius: 4px; border-left: 3px solid #ff9800;">
+                <strong style="font-size: 0.85em;">📍 現在地から</strong><br>
+                <span style="font-size: 0.85em;">
+                    直線距離: ${distanceFromUser < 1000 ? Math.round(distanceFromUser) + 'm' : (distanceFromUser / 1000).toFixed(2) + 'km'}
+                    / 徒歩約${walkingTimeFromUser}分
+                </span>
+            </div>
+        `;
+    }
+
+    // カテゴリバッジ
+    content += `
+            <div style="margin-top: 10px;">
+                <span class="facility-category" style="background-color: ${category.color}; color: white; padding: 4px 12px; border-radius: 12px; font-size: 0.75em; display: inline-block;">
+                    ${category.name}
+                </span>
+            </div>
+        </div>
+    `;
+
+    return content;
+}
+
 // 追加のユーティリティ関数
 
 // 距離計算（2点間の距離をメートルで返す）
@@ -205,6 +305,116 @@ function getFacilitiesInBounds() {
     return tsudanumaData.facilities.filter(facility => {
         return bounds.contains([facility.lat, facility.lng]);
     });
+}
+
+// 現在地を取得して表示
+function showCurrentLocation() {
+    if (!navigator.geolocation) {
+        alert('お使いのブラウザは位置情報をサポートしていません。');
+        return;
+    }
+
+    const locationButton = document.getElementById('location-btn');
+    if (locationButton) {
+        locationButton.textContent = '位置情報取得中...';
+        locationButton.disabled = true;
+    }
+
+    navigator.geolocation.getCurrentPosition(
+        // 成功時
+        (position) => {
+            userLocation = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
+
+            // 既存の現在地マーカーを削除
+            if (currentLocationMarker) {
+                map.removeLayer(currentLocationMarker);
+            }
+
+            // 現在地マーカーを作成
+            const locationIcon = L.divIcon({
+                className: 'current-location-icon',
+                html: `<div style="
+                    background-color: #4285f4;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    border: 3px solid white;
+                    box-shadow: 0 0 0 2px #4285f4, 0 2px 8px rgba(0,0,0,0.3);
+                "></div>`,
+                iconSize: [20, 20],
+                iconAnchor: [10, 10]
+            });
+
+            currentLocationMarker = L.marker([userLocation.lat, userLocation.lng], {
+                icon: locationIcon
+            }).addTo(map);
+
+            // 精度の円を追加
+            const accuracyCircle = L.circle([userLocation.lat, userLocation.lng], {
+                radius: position.coords.accuracy,
+                color: '#4285f4',
+                fillColor: '#4285f4',
+                fillOpacity: 0.1,
+                weight: 1
+            }).addTo(map);
+
+            currentLocationMarker.accuracyCircle = accuracyCircle;
+
+            // 現在地にズーム
+            map.setView([userLocation.lat, userLocation.lng], 16);
+
+            // ポップアップ
+            currentLocationMarker.bindPopup('📍 現在地').openPopup();
+
+            // マーカーを再生成して現在地からの距離を表示
+            refreshMarkers();
+
+            if (locationButton) {
+                locationButton.textContent = '📍 現在地を表示';
+                locationButton.disabled = false;
+            }
+        },
+        // エラー時
+        (error) => {
+            let errorMessage = '位置情報の取得に失敗しました。';
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    errorMessage = '位置情報の使用が許可されていません。';
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    errorMessage = '位置情報が利用できません。';
+                    break;
+                case error.TIMEOUT:
+                    errorMessage = '位置情報の取得がタイムアウトしました。';
+                    break;
+            }
+            alert(errorMessage);
+
+            if (locationButton) {
+                locationButton.textContent = '📍 現在地を表示';
+                locationButton.disabled = false;
+            }
+        },
+        // オプション
+        {
+            enableHighAccuracy: true,
+            timeout: 10000,
+            maximumAge: 0
+        }
+    );
+}
+
+// マーカーを再生成（現在地からの距離を更新）
+function refreshMarkers() {
+    // 既存のマーカーを削除
+    markerLayer.clearLayers();
+    markers = [];
+
+    // マーカーを再追加
+    addFacilityMarkers();
 }
 
 // ページ読み込み時の初期化
