@@ -421,6 +421,12 @@ function refreshMarkers() {
 document.addEventListener('DOMContentLoaded', () => {
     initMap();
 
+    // 天気情報の初期化と自動更新開始
+    startWeatherUpdates();
+
+    // 統計情報の初期化
+    initStatistics();
+
     // コンソールに統計情報を出力
     console.log('津田沼駅周辺マップが初期化されました');
     console.log('施設総数:', tsudanumaData.facilities.length);

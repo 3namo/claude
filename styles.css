@@ -240,13 +240,244 @@ footer a:hover {
 
 /* ローディング */
 .loading {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    padding: 2rem;
+    text-align: center;
+    padding: 1rem;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+/* 天気情報 */
+.weather-content {
+    font-size: 0.9rem;
+}
+
+.weather-main {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border-radius: 8px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-    z-index: 9999;
+    color: white;
+}
+
+.weather-icon {
+    font-size: 3rem;
+}
+
+.weather-temp {
+    flex: 1;
+}
+
+.temp-main {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.temp-feels {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.weather-description {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #667eea;
+}
+
+.weather-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.weather-detail {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background: #f5f5f5;
+    border-radius: 4px;
+}
+
+.detail-icon {
+    font-size: 1.2rem;
+}
+
+.detail-label {
+    font-size: 0.75rem;
+    color: #666;
+}
+
+.detail-value {
+    margin-left: auto;
+    font-weight: bold;
+}
+
+.weather-update {
+    text-align: center;
+    color: #999;
+    font-size: 0.75rem;
+}
+
+.weather-error {
+    text-align: center;
+    padding: 1rem;
+    color: #d32f2f;
+}
+
+.retry-button {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.retry-button:hover {
+    background: #5568d3;
+}
+
+/* 統計情報 */
+.statistics-content {
+    font-size: 0.85rem;
+}
+
+.stat-section {
+    margin-bottom: 1.5rem;
+}
+
+.stat-section h3 {
+    font-size: 0.95rem;
+    color: #667eea;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid #667eea;
+}
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem;
+    background: #f5f5f5;
+    border-radius: 6px;
+}
+
+.stat-icon {
+    font-size: 1.5rem;
+}
+
+.stat-info {
+    flex: 1;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: #666;
+    margin-bottom: 0.2rem;
+}
+
+.stat-value {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.age-distribution {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.age-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.age-label {
+    width: 140px;
+    font-size: 0.75rem;
+    color: #666;
+}
+
+.age-progress {
+    flex: 1;
+    height: 20px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.age-fill {
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.age-value {
+    width: 40px;
+    text-align: right;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.facility-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+}
+
+.facility-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.8rem;
+    background: #f5f5f5;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.facility-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+}
+
+.facility-count {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #667eea;
+    margin-bottom: 0.2rem;
+}
+
+.facility-name {
+    font-size: 0.75rem;
+    color: #666;
+}
+
+.stat-footer {
+    margin-top: 1rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+    color: #999;
+}
+
+.statistics-error {
+    text-align: center;
+    padding: 1rem;
+    color: #d32f2f;
 }
