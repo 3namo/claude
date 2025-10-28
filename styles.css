@@ -1,0 +1,222 @@
+/* リセットとベース設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* ヘッダー */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+}
+
+header p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* コンテナ */
+.container {
+    display: flex;
+    height: calc(100vh - 180px);
+    gap: 0;
+}
+
+/* サイドバー */
+.sidebar {
+    width: 300px;
+    background: white;
+    overflow-y: auto;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.panel {
+    padding: 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.panel h2 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #667eea;
+    border-left: 4px solid #667eea;
+    padding-left: 0.5rem;
+}
+
+/* レイヤーコントロール */
+.layer-controls label,
+.category-filters label {
+    display: block;
+    padding: 0.5rem;
+    margin-bottom: 0.3rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.layer-controls label:hover,
+.category-filters label:hover {
+    background-color: #f0f0f0;
+}
+
+.layer-controls input,
+.category-filters input {
+    margin-right: 0.5rem;
+}
+
+/* 情報パネル */
+.info-content {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.info-content ul {
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.info-content li {
+    margin-bottom: 0.3rem;
+}
+
+/* 地図コンテナ */
+.map-container {
+    flex: 1;
+    position: relative;
+    background: white;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.map-info {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+
+/* フッター */
+footer {
+    background: #333;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+footer a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Leafletカスタマイズ */
+.leaflet-popup-content-wrapper {
+    border-radius: 8px;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.4);
+}
+
+.leaflet-popup-content {
+    margin: 1rem;
+    font-size: 0.9rem;
+}
+
+.leaflet-popup-content h3 {
+    color: #667eea;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.leaflet-popup-content p {
+    margin: 0.3rem 0;
+}
+
+.facility-category {
+    display: inline-block;
+    background: #667eea;
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .sidebar {
+        width: 100%;
+        max-height: 300px;
+    }
+
+    .map-container {
+        height: 500px;
+    }
+
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    .map-info {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+/* カスタムマーカースタイル */
+.custom-marker {
+    background: white;
+    border: 2px solid #667eea;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+/* ローディング */
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    z-index: 9999;
+}

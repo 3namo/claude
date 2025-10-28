@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>津田沼駅周辺マップ - OpenStreetMap</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <!-- カスタムCSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>津田沼駅周辺マップ</h1>
+        <p>OpenStreetMapと国土地理院データを活用した地域情報マップ</p>
+    </header>
+
+    <div class="container">
+        <!-- サイドパネル -->
+        <aside class="sidebar">
+            <div class="panel">
+                <h2>地図レイヤー</h2>
+                <div class="layer-controls">
+                    <label>
+                        <input type="radio" name="baselayer" value="osm" checked>
+                        OpenStreetMap
+                    </label>
+                    <label>
+                        <input type="radio" name="baselayer" value="gsi">
+                        国土地理院（標準）
+                    </label>
+                    <label>
+                        <input type="radio" name="baselayer" value="gsi-photo">
+                        国土地理院（航空写真）
+                    </label>
+                </div>
+            </div>
+
+            <div class="panel">
+                <h2>施設カテゴリ</h2>
+                <div class="category-filters">
+                    <label>
+                        <input type="checkbox" class="category-filter" value="station" checked>
+                        駅・交通
+                    </label>
+                    <label>
+                        <input type="checkbox" class="category-filter" value="shopping" checked>
+                        ショッピング
+                    </label>
+                    <label>
+                        <input type="checkbox" class="category-filter" value="education" checked>
+                        教育機関
+                    </label>
+                    <label>
+                        <input type="checkbox" class="category-filter" value="medical" checked>
+                        医療機関
+                    </label>
+                    <label>
+                        <input type="checkbox" class="category-filter" value="public" checked>
+                        公共施設
+                    </label>
+                    <label>
+                        <input type="checkbox" class="category-filter" value="park" checked>
+                        公園
+                    </label>
+                </div>
+            </div>
+
+            <div class="panel">
+                <h2>情報</h2>
+                <div class="info-content">
+                    <p>このマップは以下のデータを使用しています：</p>
+                    <ul>
+                        <li>OpenStreetMap</li>
+                        <li>国土地理院タイル</li>
+                        <li>公共施設オープンデータ</li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 地図エリア -->
+        <main class="map-container">
+            <div id="map"></div>
+            <div class="map-info">
+                <p>クリックで施設情報を表示 | ズーム: マウスホイール/ピンチ</p>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 津田沼駅周辺マップ | データ: <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>, <a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank">国土地理院</a></p>
+    </footer>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- カスタムJS -->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
