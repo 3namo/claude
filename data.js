@@ -21,7 +21,10 @@ const tsudanumaData = {
             address: "千葉県習志野市津田沼1丁目",
             hours: "始発〜終電",
             phone: "047-472-0171",
-            website: "https://www.jreast.co.jp/estation/station/info.aspx?StationCd=1382"
+            website: "https://www.jreast.co.jp/estation/station/info.aspx?StationCd=1382",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '津田沼',
+            walkingMinutes: 0
         },
         {
             id: 2,
@@ -34,7 +37,10 @@ const tsudanumaData = {
             address: "千葉県習志野市津田沼1丁目10-30",
             hours: "始発〜終電",
             phone: "047-472-1169",
-            website: "https://www.shinkeisei.co.jp/railway/station/shin-tsudanuma/"
+            website: "https://www.shinkeisei.co.jp/railway/station/shin-tsudanuma/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '津田沼',
+            walkingMinutes: 3
         },
 
         // ショッピング
@@ -49,7 +55,10 @@ const tsudanumaData = {
             address: "千葉県習志野市津田沼1丁目23-1",
             hours: "10:00〜21:00（店舗により異なる）",
             phone: "047-455-1000",
-            website: "https://tsudanuma-aeonmall.com/"
+            website: "https://tsudanuma-aeonmall.com/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '津田沼',
+            walkingMinutes: 5
         },
         {
             id: 4,
@@ -62,7 +71,10 @@ const tsudanumaData = {
             address: "千葉県船橋市前原西2-18-1",
             hours: "10:00〜21:00",
             phone: "047-474-1111",
-            website: "https://tsudanuma.parco.jp/"
+            website: "https://tsudanuma.parco.jp/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '津田沼',
+            walkingMinutes: 1
         },
         {
             id: 5,
@@ -75,7 +87,10 @@ const tsudanumaData = {
             address: "千葉県習志野市谷津1丁目16-1",
             hours: "10:00〜20:00（店舗により異なる）",
             phone: "047-470-1231",
-            website: "https://www.moritown-tsudanuma.com/"
+            website: "https://www.moritown-tsudanuma.com/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '津田沼',
+            walkingMinutes: 2
         },
 
         // 教育機関
@@ -90,7 +105,10 @@ const tsudanumaData = {
             address: "千葉県習志野市津田沼2丁目17-1",
             hours: "平日 8:00〜22:00",
             phone: "047-478-0222",
-            website: "https://www.it-chiba.ac.jp/"
+            website: "https://www.it-chiba.ac.jp/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '津田沼',
+            walkingMinutes: 7
         },
         {
             id: 7,
@@ -103,7 +121,10 @@ const tsudanumaData = {
             address: "千葉県習志野市泉町1丁目2-1",
             hours: "平日 8:30〜18:00",
             phone: "047-474-2201",
-            website: "https://www.cit.nihon-u.ac.jp/"
+            website: "https://www.cit.nihon-u.ac.jp/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '津田沼',
+            walkingMinutes: 10
         },
 
         // 医療機関
@@ -118,7 +139,10 @@ const tsudanumaData = {
             address: "千葉県習志野市谷津4丁目6-16",
             hours: "月〜金 8:30〜17:00／土 8:30〜12:00",
             phone: "047-451-6000",
-            website: "https://www.yatsu.or.jp/"
+            website: "https://www.yatsu.or.jp/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '津田沼',
+            walkingMinutes: 8
         },
         {
             id: 9,
@@ -131,7 +155,10 @@ const tsudanumaData = {
             address: "千葉県習志野市津田沼5丁目5-25",
             hours: "月〜土 8:30〜17:00",
             phone: "047-454-1511",
-            website: "https://www.narashino-hp.or.jp/"
+            website: "https://www.narashino-hp.or.jp/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '津田沼',
+            walkingMinutes: 10
         },
 
         // 公共施設
@@ -146,7 +173,10 @@ const tsudanumaData = {
             address: "千葉県習志野市鷺沼2丁目1-1",
             hours: "月〜金 8:30〜17:15",
             phone: "047-451-1151",
-            website: "https://www.city.narashino.lg.jp/"
+            website: "https://www.city.narashino.lg.jp/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '津田沼',
+            walkingMinutes: 12
         },
         {
             id: 11,
@@ -159,7 +189,10 @@ const tsudanumaData = {
             address: "千葉県習志野市谷津5丁目16-33",
             hours: "火〜金 9:00〜20:00／土日 9:00〜17:00",
             phone: "047-475-3213",
-            website: "https://www.lib.narashino.chiba.jp/"
+            website: "https://www.lib.narashino.chiba.jp/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '津田沼',
+            walkingMinutes: 5
         },
         {
             id: 12,
@@ -172,7 +205,10 @@ const tsudanumaData = {
             address: "千葉県習志野市谷津1丁目16-1",
             hours: "9:00〜22:00",
             phone: "047-479-1212",
-            website: "https://www.narashino-bunka.or.jp/"
+            website: "https://www.narashino-bunka.or.jp/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '津田沼',
+            walkingMinutes: 6
         },
 
         // 公園
@@ -187,7 +223,10 @@ const tsudanumaData = {
             address: "千葉県習志野市谷津3丁目1-14",
             hours: "24時間開放（バラ園: 9:00〜17:00）",
             phone: "047-453-9297",
-            website: "https://www.city.narashino.lg.jp/citysales/kanko/kankospot/yatsubaraen.html"
+            website: "https://www.city.narashino.lg.jp/citysales/kanko/kankospot/yatsubaraen.html",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '津田沼',
+            walkingMinutes: 10
         },
         {
             id: 14,
@@ -200,7 +239,10 @@ const tsudanumaData = {
             address: "千葉県習志野市谷津3丁目",
             hours: "24時間開放（自然観察センター: 9:00〜17:00）",
             phone: "047-454-8416",
-            website: "https://www.yatsuhigata.jp/"
+            website: "https://www.yatsuhigata.jp/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '津田沼',
+            walkingMinutes: 15
         },
         {
             id: 15,
@@ -213,7 +255,10 @@ const tsudanumaData = {
             address: "千葉県習志野市袖ケ浦5丁目4",
             hours: "24時間開放",
             phone: "047-453-9297",
-            website: "https://www.city.narashino.lg.jp/"
+            website: "https://www.city.narashino.lg.jp/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '津田沼',
+            walkingMinutes: 13
         },
 
         // その他主要施設
@@ -228,7 +273,10 @@ const tsudanumaData = {
             address: "千葉県船橋市前原西2-19-1",
             hours: "10:00〜21:00",
             phone: "047-493-1010",
-            website: "https://www.yamada-denki.jp/store/contents/?d=3020"
+            website: "https://www.yamada-denki.jp/store/contents/?d=3020",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '津田沼',
+            walkingMinutes: 2
         },
         {
             id: 17,
@@ -241,7 +289,10 @@ const tsudanumaData = {
             address: "千葉県習志野市津田沼5丁目11-1",
             hours: "始発〜終電",
             phone: "047-476-1125",
-            website: "https://www.keisei.co.jp/keisei/tetudou/accessj/keisei-tsudanuma.htm"
+            website: "https://www.keisei.co.jp/keisei/tetudou/accessj/keisei-tsudanuma.htm",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '津田沼',
+            walkingMinutes: 8
         },
 
         // 防災施設（オープンデータ）
@@ -256,7 +307,10 @@ const tsudanumaData = {
             address: "千葉県習志野市津田沼2丁目3-1",
             hours: "災害時のみ開設",
             phone: "047-451-1151（市役所）",
-            website: "https://www.city.narashino.lg.jp/"
+            website: "https://www.city.narashino.lg.jp/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '津田沼',
+            walkingMinutes: 5
         },
         {
             id: 19,
@@ -269,7 +323,10 @@ const tsudanumaData = {
             address: "千葉県習志野市津田沼4丁目5-1",
             hours: "災害時のみ開設",
             phone: "047-451-1151（市役所）",
-            website: "https://www.city.narashino.lg.jp/"
+            website: "https://www.city.narashino.lg.jp/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '津田沼',
+            walkingMinutes: 8
         },
         {
             id: 20,
@@ -282,7 +339,10 @@ const tsudanumaData = {
             address: "千葉県習志野市津田沼5丁目15-1",
             hours: "24時間",
             phone: "119（緊急）/ 047-452-1283（代表）",
-            website: "https://www.city.narashino.lg.jp/"
+            website: "https://www.city.narashino.lg.jp/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '津田沼',
+            walkingMinutes: 10
         },
         {
             id: 21,
@@ -295,7 +355,10 @@ const tsudanumaData = {
             address: "千葉県習志野市谷津5丁目",
             hours: "24時間開放",
             phone: "047-451-1151（市役所）",
-            website: "https://www.city.narashino.lg.jp/"
+            website: "https://www.city.narashino.lg.jp/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '津田沼',
+            walkingMinutes: 7
         },
 
         // ========== 千葉駅エリア ==========
@@ -310,7 +373,10 @@ const tsudanumaData = {
             address: "千葉県千葉市中央区新千葉1丁目",
             hours: "始発〜終電",
             phone: "043-222-0145",
-            website: "https://www.jreast.co.jp/"
+            website: "https://www.jreast.co.jp/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '千葉',
+            walkingMinutes: 0
         },
         {
             id: 23,
@@ -323,7 +389,10 @@ const tsudanumaData = {
             address: "千葉県千葉市中央区新千葉1-1-1",
             hours: "10:00〜21:00（店舗により異なる）",
             phone: "043-227-8201",
-            website: "https://www.perie.co.jp/chiba/"
+            website: "https://www.perie.co.jp/chiba/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '千葉',
+            walkingMinutes: 1
         },
         {
             id: 24,
@@ -336,7 +405,10 @@ const tsudanumaData = {
             address: "千葉県千葉市中央区新町1000",
             hours: "10:00〜20:00",
             phone: "043-245-2111",
-            website: "https://www.sogo-seibu.jp/chiba/"
+            website: "https://www.sogo-seibu.jp/chiba/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '千葉',
+            walkingMinutes: 3
         },
         {
             id: 25,
@@ -349,7 +421,10 @@ const tsudanumaData = {
             address: "千葉県千葉市中央区千葉港1-1",
             hours: "月〜金 8:30〜17:30",
             phone: "043-245-5111",
-            website: "https://www.city.chiba.jp/"
+            website: "https://www.city.chiba.jp/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '千葉',
+            walkingMinutes: 12
         },
         {
             id: 26,
@@ -362,7 +437,10 @@ const tsudanumaData = {
             address: "千葉県千葉市中央区弁天3-1-1",
             hours: "24時間開放",
             phone: "043-251-5103",
-            website: "https://www.city.chiba.jp/"
+            website: "https://www.city.chiba.jp/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '千葉',
+            walkingMinutes: 15
         },
 
         // ========== 西千葉駅エリア ==========
@@ -377,7 +455,10 @@ const tsudanumaData = {
             address: "千葉県千葉市中央区春日2丁目",
             hours: "始発〜終電",
             phone: "043-222-0145",
-            website: "https://www.jreast.co.jp/"
+            website: "https://www.jreast.co.jp/",
+            lines: ['sobuLocal'],
+            nearestStation: '西千葉',
+            walkingMinutes: 0
         },
         {
             id: 28,
@@ -390,7 +471,10 @@ const tsudanumaData = {
             address: "千葉県千葉市稲毛区弥生町1-33",
             hours: "平日 8:30〜17:15",
             phone: "043-251-1111",
-            website: "https://www.chiba-u.ac.jp/"
+            website: "https://www.chiba-u.ac.jp/",
+            lines: ['sobuLocal'],
+            nearestStation: '西千葉',
+            walkingMinutes: 5
         },
 
         // ========== 稲毛駅エリア ==========
@@ -405,7 +489,10 @@ const tsudanumaData = {
             address: "千葉県千葉市稲毛区稲毛東3丁目",
             hours: "始発〜終電",
             phone: "043-222-0145",
-            website: "https://www.jreast.co.jp/"
+            website: "https://www.jreast.co.jp/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '稲毛',
+            walkingMinutes: 0
         },
         {
             id: 30,
@@ -418,7 +505,10 @@ const tsudanumaData = {
             address: "千葉県千葉市稲毛区稲毛東3-19-11",
             hours: "10:00〜21:00",
             phone: "043-307-8201",
-            website: "https://www.perie.co.jp/inage/"
+            website: "https://www.perie.co.jp/inage/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '稲毛',
+            walkingMinutes: 1
         },
         {
             id: 31,
@@ -431,7 +521,10 @@ const tsudanumaData = {
             address: "千葉県千葉市稲毛区稲毛1-15-10",
             hours: "参拝自由",
             phone: "043-245-7777",
-            website: "https://www.sengenjinja.info/"
+            website: "https://www.sengenjinja.info/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '稲毛',
+            walkingMinutes: 10
         },
 
         // ========== 新検見川駅エリア ==========
@@ -446,7 +539,10 @@ const tsudanumaData = {
             address: "千葉県千葉市花見川区南花園2丁目",
             hours: "始発〜終電",
             phone: "043-222-0145",
-            website: "https://www.jreast.co.jp/"
+            website: "https://www.jreast.co.jp/",
+            lines: ['sobuLocal'],
+            nearestStation: '新検見川',
+            walkingMinutes: 0
         },
         {
             id: 33,
@@ -459,7 +555,10 @@ const tsudanumaData = {
             address: "千葉県千葉市花見川区花園1-8-1",
             hours: "9:00〜22:00",
             phone: "043-250-3011",
-            website: "https://www.aeon.com/"
+            website: "https://www.aeon.com/",
+            lines: ['sobuLocal'],
+            nearestStation: '新検見川',
+            walkingMinutes: 3
         },
 
         // ========== 幕張駅エリア ==========
@@ -474,7 +573,10 @@ const tsudanumaData = {
             address: "千葉県千葉市花見川区幕張町5丁目",
             hours: "始発〜終電",
             phone: "043-222-0145",
-            website: "https://www.jreast.co.jp/"
+            website: "https://www.jreast.co.jp/",
+            lines: ['sobuLocal'],
+            nearestStation: '幕張',
+            walkingMinutes: 0
         },
         {
             id: 35,
@@ -487,7 +589,10 @@ const tsudanumaData = {
             address: "千葉県千葉市美浜区中瀬2-1",
             hours: "イベントにより異なる",
             phone: "043-296-0001",
-            website: "https://www.m-messe.co.jp/"
+            website: "https://www.m-messe.co.jp/",
+            lines: ['sobuLocal'],
+            nearestStation: '幕張',
+            walkingMinutes: 20
         },
 
         // ========== 幕張本郷駅エリア ==========
@@ -502,7 +607,10 @@ const tsudanumaData = {
             address: "千葉県千葉市花見川区幕張本郷1丁目",
             hours: "始発〜終電",
             phone: "043-222-0145",
-            website: "https://www.jreast.co.jp/"
+            website: "https://www.jreast.co.jp/",
+            lines: ['sobuLocal'],
+            nearestStation: '幕張本郷',
+            walkingMinutes: 0
         },
         {
             id: 37,
@@ -515,7 +623,10 @@ const tsudanumaData = {
             address: "千葉県千葉市花見川区幕張本郷2-25-1",
             hours: "10:00〜21:00",
             phone: "043-350-9000",
-            website: "https://www.ones-mall.jp/"
+            website: "https://www.ones-mall.jp/",
+            lines: ['sobuLocal'],
+            nearestStation: '幕張本郷',
+            walkingMinutes: 3
         },
 
         // ========== 船橋駅エリア ==========
@@ -530,7 +641,10 @@ const tsudanumaData = {
             address: "千葉県船橋市本町7丁目",
             hours: "始発〜終電",
             phone: "047-424-2727",
-            website: "https://www.jreast.co.jp/"
+            website: "https://www.jreast.co.jp/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '船橋',
+            walkingMinutes: 0
         },
         {
             id: 39,
@@ -543,7 +657,10 @@ const tsudanumaData = {
             address: "千葉県船橋市本町7-1-1",
             hours: "10:00〜20:00",
             phone: "047-425-2211",
-            website: "https://www.tobu-dept.jp/funabashi/"
+            website: "https://www.tobu-dept.jp/funabashi/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '船橋',
+            walkingMinutes: 1
         },
         {
             id: 40,
@@ -556,7 +673,10 @@ const tsudanumaData = {
             address: "千葉県船橋市本町7-1-1",
             hours: "10:00〜21:00",
             phone: "047-460-0222",
-            website: "https://www.shapo-funabashi.com/"
+            website: "https://www.shapo-funabashi.com/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '船橋',
+            walkingMinutes: 1
         },
         {
             id: 41,
@@ -569,7 +689,10 @@ const tsudanumaData = {
             address: "千葉県船橋市湊町2-10-25",
             hours: "月〜金 9:00〜17:00",
             phone: "047-436-2111",
-            website: "https://www.city.funabashi.lg.jp/"
+            website: "https://www.city.funabashi.lg.jp/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '船橋',
+            walkingMinutes: 5
         },
         {
             id: 42,
@@ -582,7 +705,10 @@ const tsudanumaData = {
             address: "千葉県船橋市習志野台7-5-1",
             hours: "イベントにより異なる",
             phone: "047-461-5611",
-            website: "https://www.funabashi-arena.jp/"
+            website: "https://www.funabashi-arena.jp/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '船橋',
+            walkingMinutes: 25
         },
 
         // ========== 西船橋駅エリア ==========
@@ -597,7 +723,10 @@ const tsudanumaData = {
             address: "千葉県船橋市西船4丁目",
             hours: "始発〜終電",
             phone: "047-424-2727",
-            website: "https://www.jreast.co.jp/"
+            website: "https://www.jreast.co.jp/",
+            lines: ['sobuLocal'],
+            nearestStation: '西船橋',
+            walkingMinutes: 0
         },
         {
             id: 44,
@@ -610,7 +739,10 @@ const tsudanumaData = {
             address: "千葉県船橋市西船4-27-7",
             hours: "10:00〜22:00",
             phone: "047-495-1711",
-            website: "https://www.tobustore.co.jp/"
+            website: "https://www.tobustore.co.jp/",
+            lines: ['sobuLocal'],
+            nearestStation: '西船橋',
+            walkingMinutes: 2
         },
 
         // ========== 下総中山駅エリア ==========
@@ -625,7 +757,10 @@ const tsudanumaData = {
             address: "千葉県船橋市本中山3丁目",
             hours: "始発〜終電",
             phone: "047-424-2727",
-            website: "https://www.jreast.co.jp/"
+            website: "https://www.jreast.co.jp/",
+            lines: ['sobuLocal'],
+            nearestStation: '下総中山',
+            walkingMinutes: 0
         },
         {
             id: 46,
@@ -638,7 +773,10 @@ const tsudanumaData = {
             address: "千葉県市川市中山2-10-1",
             hours: "参拝自由",
             phone: "047-334-3433",
-            website: "https://www.hokekyoji.com/"
+            website: "https://www.hokekyoji.com/",
+            lines: ['sobuLocal'],
+            nearestStation: '下総中山',
+            walkingMinutes: 8
         },
 
         // ========== 本八幡駅エリア ==========
@@ -653,7 +791,10 @@ const tsudanumaData = {
             address: "千葉県市川市八幡3丁目",
             hours: "始発〜終電",
             phone: "047-332-2145",
-            website: "https://www.jreast.co.jp/"
+            website: "https://www.jreast.co.jp/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '本八幡',
+            walkingMinutes: 0
         },
         {
             id: 48,
@@ -666,7 +807,10 @@ const tsudanumaData = {
             address: "千葉県市川市八幡3-3-1",
             hours: "10:00〜21:00",
             phone: "047-370-0222",
-            website: "https://www.shapo-motoyawata.com/"
+            website: "https://www.shapo-motoyawata.com/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '本八幡',
+            walkingMinutes: 1
         },
         {
             id: 49,
@@ -679,7 +823,10 @@ const tsudanumaData = {
             address: "千葉県市川市鬼高1-1-1",
             hours: "10:00〜21:00（店舗により異なる）",
             phone: "047-378-3551",
-            website: "https://www.nikke-coltonplaza.jp/"
+            website: "https://www.nikke-coltonplaza.jp/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '本八幡',
+            walkingMinutes: 12
         },
         {
             id: 50,
@@ -692,7 +839,10 @@ const tsudanumaData = {
             address: "千葉県市川市南八幡2-20-2",
             hours: "月〜金 8:45〜17:15",
             phone: "047-334-1111",
-            website: "https://www.city.ichikawa.lg.jp/"
+            website: "https://www.city.ichikawa.lg.jp/",
+            lines: ['sobuLocal', 'sobuRapid'],
+            nearestStation: '本八幡',
+            walkingMinutes: 3
         },
 
         // ========== 市川駅エリア ==========
@@ -707,7 +857,10 @@ const tsudanumaData = {
             address: "千葉県市川市市川1丁目",
             hours: "始発〜終電",
             phone: "047-332-2145",
-            website: "https://www.jreast.co.jp/"
+            website: "https://www.jreast.co.jp/",
+            lines: ['sobuLocal'],
+            nearestStation: '市川',
+            walkingMinutes: 0
         },
         {
             id: 52,
@@ -720,7 +873,10 @@ const tsudanumaData = {
             address: "千葉県市川市市川1-4-10",
             hours: "10:00〜21:00",
             phone: "047-322-0222",
-            website: "https://www.shapo-ichikawa.com/"
+            website: "https://www.shapo-ichikawa.com/",
+            lines: ['sobuLocal'],
+            nearestStation: '市川',
+            walkingMinutes: 1
         },
         {
             id: 53,
@@ -733,7 +889,599 @@ const tsudanumaData = {
             address: "千葉県市川市大和田1-1-5",
             hours: "9:00〜22:00",
             phone: "047-379-5111",
-            website: "https://www.tekona.net/bunka/"
+            website: "https://www.tekona.net/bunka/",
+            lines: ['sobuRapid'],
+            nearestStation: '本八幡',
+            walkingMinutes: 5
+        },
+
+        // ========== 山手線エリア ==========
+        // 新宿駅周辺
+        {
+            id: 54,
+            name: "ルミネエスト新宿",
+            category: "shopping",
+            lat: 35.6911,
+            lng: 139.7006,
+            description: "新宿駅直結のファッションビル。若者向けブランドが充実。",
+            icon: "🏬",
+            address: "東京都新宿区新宿3-38-1",
+            hours: "11:00〜21:30",
+            phone: "03-5269-1111",
+            website: "https://www.lumine.ne.jp/est/",
+            lines: ['yamanote', 'chuoRapid', 'sobuLocal'],
+            nearestStation: '新宿',
+            walkingMinutes: 1
+        },
+        {
+            id: 55,
+            name: "新宿高島屋",
+            category: "shopping",
+            lat: 35.6897,
+            lng: 139.6994,
+            description: "老舗百貨店。高級ブランドから食品まで幅広く展開。",
+            icon: "🛍️",
+            address: "東京都渋谷区千駄ヶ谷5-24-2",
+            hours: "10:00〜20:00",
+            phone: "03-5361-1111",
+            website: "https://www.takashimaya.co.jp/shinjuku/",
+            lines: ['yamanote', 'chuoRapid', 'sobuLocal'],
+            nearestStation: '新宿',
+            walkingMinutes: 3
+        },
+        {
+            id: 56,
+            name: "都立新宿高等学校",
+            category: "highschool",
+            lat: 35.6847,
+            lng: 139.7083,
+            description: "都立の進学校。文武両道を掲げる伝統校。",
+            icon: "🏫",
+            address: "東京都新宿区内藤町11-4",
+            hours: "平日 8:30〜17:00",
+            phone: "03-3354-7411",
+            website: "https://www.metro.ed.jp/shinjuku-h/",
+            lines: ['yamanote'],
+            nearestStation: '新宿',
+            walkingMinutes: 10
+        },
+
+        // 渋谷駅周辺
+        {
+            id: 57,
+            name: "渋谷スクランブルスクエア",
+            category: "shopping",
+            lat: 35.6585,
+            lng: 139.7024,
+            description: "渋谷駅直結の高層複合施設。展望台SHIBUYA SKYも人気。",
+            icon: "🏢",
+            address: "東京都渋谷区渋谷2-24-12",
+            hours: "10:00〜21:00（店舗により異なる）",
+            phone: "03-4221-0229",
+            website: "https://www.shibuya-scramble-square.com/",
+            lines: ['yamanote'],
+            nearestStation: '渋谷',
+            walkingMinutes: 1
+        },
+        {
+            id: 58,
+            name: "渋谷109",
+            category: "shopping",
+            lat: 35.6595,
+            lng: 139.6985,
+            description: "若者のファッションの聖地。トレンドの発信地。",
+            icon: "🛍️",
+            address: "東京都渋谷区道玄坂2-29-1",
+            hours: "10:00〜21:00",
+            phone: "03-3477-5111",
+            website: "https://www.shibuya109.jp/",
+            lines: ['yamanote'],
+            nearestStation: '渋谷',
+            walkingMinutes: 2
+        },
+
+        // 池袋駅周辺
+        {
+            id: 59,
+            name: "池袋駅（JR山手線）",
+            category: "station",
+            lat: 35.7295,
+            lng: 139.7109,
+            description: "山手線の主要駅。埼玉方面への玄関口。",
+            icon: "🚉",
+            address: "東京都豊島区南池袋1丁目",
+            hours: "始発〜終電",
+            phone: "03-3981-2111",
+            website: "https://www.jreast.co.jp/",
+            lines: ['yamanote'],
+            nearestStation: '池袋',
+            walkingMinutes: 0
+        },
+        {
+            id: 60,
+            name: "サンシャインシティ",
+            category: "shopping",
+            lat: 35.7295,
+            lng: 139.7188,
+            description: "大型複合商業施設。水族館、展望台、ショップが充実。",
+            icon: "🏬",
+            address: "東京都豊島区東池袋3-1-1",
+            hours: "10:00〜20:00（施設により異なる）",
+            phone: "03-3989-3331",
+            website: "https://sunshinecity.jp/",
+            lines: ['yamanote'],
+            nearestStation: '池袋',
+            walkingMinutes: 8
+        },
+        {
+            id: 61,
+            name: "立教大学 池袋キャンパス",
+            category: "education",
+            lat: 35.7318,
+            lng: 139.7179,
+            description: "私立大学。歴史ある赤レンガ校舎が有名。",
+            icon: "🎓",
+            address: "東京都豊島区西池袋3-34-1",
+            hours: "平日 8:00〜22:00",
+            phone: "03-3985-2202",
+            website: "https://www.rikkyo.ac.jp/",
+            lines: ['yamanote'],
+            nearestStation: '池袋',
+            walkingMinutes: 7
+        },
+
+        // 上野駅周辺
+        {
+            id: 62,
+            name: "上野駅（JR山手線）",
+            category: "station",
+            lat: 35.7138,
+            lng: 139.7774,
+            description: "北関東・東北方面への玄関口。新幹線も発着。",
+            icon: "🚉",
+            address: "東京都台東区上野7丁目",
+            hours: "始発〜終電",
+            phone: "03-3841-8411",
+            website: "https://www.jreast.co.jp/",
+            lines: ['yamanote', 'takasaki'],
+            nearestStation: '上野',
+            walkingMinutes: 0
+        },
+        {
+            id: 63,
+            name: "アメヤ横丁",
+            category: "shopping",
+            lat: 35.7089,
+            lng: 139.7753,
+            description: "活気あふれる商店街。食品、衣料品、雑貨が格安。",
+            icon: "🛍️",
+            address: "東京都台東区上野4-6-5",
+            hours: "10:00〜19:00（店舗により異なる）",
+            phone: "03-3832-5053",
+            website: "https://www.ameyoko.net/",
+            lines: ['yamanote'],
+            nearestStation: '上野',
+            walkingMinutes: 2
+        },
+        {
+            id: 64,
+            name: "上野公園",
+            category: "park",
+            lat: 35.7148,
+            lng: 139.7740,
+            description: "広大な都市公園。博物館、動物園、美術館が隣接。",
+            icon: "🌳",
+            address: "東京都台東区上野公園",
+            hours: "5:00〜23:00",
+            phone: "03-3828-5644",
+            website: "https://www.kensetsu.metro.tokyo.lg.jp/",
+            lines: ['yamanote'],
+            nearestStation: '上野',
+            walkingMinutes: 2
+        },
+
+        // 東京駅周辺
+        {
+            id: 65,
+            name: "東京駅（JR山手線）",
+            category: "station",
+            lat: 35.6812,
+            lng: 139.7671,
+            description: "日本の鉄道網の中心駅。新幹線の起点。",
+            icon: "🚉",
+            address: "東京都千代田区丸の内1丁目",
+            hours: "始発〜終電",
+            phone: "03-3212-2111",
+            website: "https://www.jreast.co.jp/",
+            lines: ['yamanote', 'chuoRapid', 'sobuRapid', 'takasaki'],
+            nearestStation: '東京',
+            walkingMinutes: 0
+        },
+        {
+            id: 66,
+            name: "大丸東京店",
+            category: "shopping",
+            lat: 35.6809,
+            lng: 139.7651,
+            description: "東京駅直結の百貨店。お土産も充実。",
+            icon: "🛍️",
+            address: "東京都千代田区丸の内1-9-1",
+            hours: "10:00〜20:00",
+            phone: "03-3212-8011",
+            website: "https://www.daimaru.co.jp/tokyo/",
+            lines: ['yamanote', 'chuoRapid'],
+            nearestStation: '東京',
+            walkingMinutes: 1
+        },
+
+        // 品川駅周辺
+        {
+            id: 67,
+            name: "品川駅（JR山手線）",
+            category: "station",
+            lat: 35.6284,
+            lng: 139.7387,
+            description: "東海道新幹線の停車駅。羽田空港へのアクセスも便利。",
+            icon: "🚉",
+            address: "東京都港区高輪3丁目",
+            hours: "始発〜終電",
+            phone: "03-3444-4761",
+            website: "https://www.jreast.co.jp/",
+            lines: ['yamanote', 'sobuRapid'],
+            nearestStation: '品川',
+            walkingMinutes: 0
+        },
+        {
+            id: 68,
+            name: "アトレ品川",
+            category: "shopping",
+            lat: 35.6286,
+            lng: 139.7389,
+            description: "品川駅直結のショッピングセンター。",
+            icon: "🏢",
+            address: "東京都港区港南2-18-1",
+            hours: "10:00〜21:00",
+            phone: "03-6717-0900",
+            website: "https://www.atre.co.jp/shinagawa/",
+            lines: ['yamanote'],
+            nearestStation: '品川',
+            walkingMinutes: 1
+        },
+
+        // ========== 中央線エリア ==========
+        // 吉祥寺駅周辺
+        {
+            id: 69,
+            name: "吉祥寺駅（JR中央線）",
+            category: "station",
+            lat: 35.7031,
+            lng: 139.5796,
+            description: "住みたい街ランキング上位常連。商業施設が充実。",
+            icon: "🚉",
+            address: "東京都武蔵野市吉祥寺南町1丁目",
+            hours: "始発〜終電",
+            phone: "0422-22-2115",
+            website: "https://www.jreast.co.jp/",
+            lines: ['chuoRapid', 'sobuLocal'],
+            nearestStation: '吉祥寺',
+            walkingMinutes: 0
+        },
+        {
+            id: 70,
+            name: "吉祥寺パルコ",
+            category: "shopping",
+            lat: 35.7028,
+            lng: 139.5801,
+            description: "ファッションと雑貨の人気スポット。",
+            icon: "🛍️",
+            address: "東京都武蔵野市吉祥寺本町1-5-1",
+            hours: "10:00〜21:00",
+            phone: "0422-21-8111",
+            website: "https://kichijoji.parco.jp/",
+            lines: ['chuoRapid'],
+            nearestStation: '吉祥寺',
+            walkingMinutes: 2
+        },
+        {
+            id: 71,
+            name: "井の頭恩賜公園",
+            category: "park",
+            lat: 35.7005,
+            lng: 139.5737,
+            description: "広大な公園。ボート池と自然が楽しめる。",
+            icon: "🌳",
+            address: "東京都武蔵野市御殿山1-18-31",
+            hours: "24時間開放",
+            phone: "0422-47-6900",
+            website: "https://www.kensetsu.metro.tokyo.lg.jp/",
+            lines: ['chuoRapid'],
+            nearestStation: '吉祥寺',
+            walkingMinutes: 5
+        },
+
+        // 中野駅周辺
+        {
+            id: 72,
+            name: "中野駅（JR中央線）",
+            category: "station",
+            lat: 35.7058,
+            lng: 139.6656,
+            description: "サブカルチャーの街。中野ブロードウェイが有名。",
+            icon: "🚉",
+            address: "東京都中野区中野5丁目",
+            hours: "始発〜終電",
+            phone: "03-3389-1111",
+            website: "https://www.jreast.co.jp/",
+            lines: ['chuoRapid', 'sobuLocal'],
+            nearestStation: '中野',
+            walkingMinutes: 0
+        },
+        {
+            id: 73,
+            name: "中野ブロードウェイ",
+            category: "shopping",
+            lat: 35.7065,
+            lng: 139.6641,
+            description: "サブカルチャーの聖地。アニメ・マンガグッズが充実。",
+            icon: "🏢",
+            address: "東京都中野区中野5-52-15",
+            hours: "12:00〜20:00（店舗により異なる）",
+            phone: "03-3388-7004",
+            website: "https://www.nbw.jp/",
+            lines: ['chuoRapid'],
+            nearestStation: '中野',
+            walkingMinutes: 5
+        },
+
+        // 立川駅周辺
+        {
+            id: 74,
+            name: "立川駅（JR中央線）",
+            category: "station",
+            lat: 35.6977,
+            lng: 139.4137,
+            description: "多摩地区の中心駅。商業施設が集積。",
+            icon: "🚉",
+            address: "東京都立川市曙町2丁目",
+            hours: "始発〜終電",
+            phone: "042-523-3461",
+            website: "https://www.jreast.co.jp/",
+            lines: ['chuoRapid'],
+            nearestStation: '立川',
+            walkingMinutes: 0
+        },
+        {
+            id: 75,
+            name: "ルミネ立川",
+            category: "shopping",
+            lat: 35.6979,
+            lng: 139.4139,
+            description: "立川駅直結のショッピングセンター。",
+            icon: "🏬",
+            address: "東京都立川市曙町2-1-1",
+            hours: "10:00〜21:00",
+            phone: "042-527-8211",
+            website: "https://www.lumine.ne.jp/tachikawa/",
+            lines: ['chuoRapid'],
+            nearestStation: '立川',
+            walkingMinutes: 1
+        },
+        {
+            id: 76,
+            name: "昭和記念公園",
+            category: "park",
+            lat: 35.6976,
+            lng: 139.4055,
+            description: "広大な国営公園。四季折々の花が楽しめる。",
+            icon: "🌳",
+            address: "東京都立川市緑町3173",
+            hours: "9:30〜17:00（季節により変動）",
+            phone: "042-528-1751",
+            website: "https://www.showakinen-koen.jp/",
+            lines: ['chuoRapid'],
+            nearestStation: '立川',
+            walkingMinutes: 10
+        },
+
+        // 八王子駅周辺
+        {
+            id: 77,
+            name: "八王子駅（JR中央線）",
+            category: "station",
+            lat: 35.6559,
+            lng: 139.3389,
+            description: "八王子市の中心駅。学生が多い街。",
+            icon: "🚉",
+            address: "東京都八王子市旭町1-1",
+            hours: "始発〜終電",
+            phone: "042-622-4819",
+            website: "https://www.jreast.co.jp/",
+            lines: ['chuoRapid'],
+            nearestStation: '八王子',
+            walkingMinutes: 0
+        },
+        {
+            id: 78,
+            name: "セレオ八王子",
+            category: "shopping",
+            lat: 35.6561,
+            lng: 139.3391,
+            description: "八王子駅直結のショッピングセンター。",
+            icon: "🏢",
+            address: "東京都八王子市旭町1-1",
+            hours: "10:00〜21:00",
+            phone: "042-686-3111",
+            website: "https://www.celeo.co.jp/hachioji/",
+            lines: ['chuoRapid'],
+            nearestStation: '八王子',
+            walkingMinutes: 1
+        },
+        {
+            id: 79,
+            name: "都立八王子東高等学校",
+            category: "highschool",
+            lat: 35.6648,
+            lng: 139.3515,
+            description: "都立の進学校。部活動も盛ん。",
+            icon: "🏫",
+            address: "東京都八王子市高倉町68-1",
+            hours: "平日 8:30〜17:00",
+            phone: "042-673-5611",
+            website: "https://www.metro.ed.jp/hachiojihigashi-h/",
+            lines: ['chuoRapid'],
+            nearestStation: '八王子',
+            walkingMinutes: 15
+        },
+
+        // ========== 高崎線エリア ==========
+        // 大宮駅周辺
+        {
+            id: 80,
+            name: "大宮駅（JR高崎線）",
+            category: "station",
+            lat: 35.9063,
+            lng: 139.6239,
+            description: "埼玉県の交通の要衝。新幹線も発着。",
+            icon: "🚉",
+            address: "埼玉県さいたま市大宮区錦町630",
+            hours: "始発〜終電",
+            phone: "048-642-2560",
+            website: "https://www.jreast.co.jp/",
+            lines: ['takasaki'],
+            nearestStation: '大宮',
+            walkingMinutes: 0
+        },
+        {
+            id: 81,
+            name: "ルミネ大宮",
+            category: "shopping",
+            lat: 35.9065,
+            lng: 139.6241,
+            description: "大宮駅直結のショッピングセンター。",
+            icon: "🏬",
+            address: "埼玉県さいたま市大宮区錦町630",
+            hours: "10:00〜21:00",
+            phone: "048-645-1211",
+            website: "https://www.lumine.ne.jp/omiya/",
+            lines: ['takasaki'],
+            nearestStation: '大宮',
+            walkingMinutes: 1
+        },
+        {
+            id: 82,
+            name: "さいたまスーパーアリーナ",
+            category: "public",
+            lat: 35.8943,
+            lng: 139.6314,
+            description: "大規模イベント施設。コンサート、スポーツイベントを開催。",
+            icon: "🏟️",
+            address: "埼玉県さいたま市中央区新都心8",
+            hours: "イベントにより異なる",
+            phone: "048-601-1122",
+            website: "https://www.saitama-arena.co.jp/",
+            lines: ['takasaki'],
+            nearestStation: '大宮',
+            walkingMinutes: 15
+        },
+
+        // 熊谷駅周辺
+        {
+            id: 83,
+            name: "熊谷駅（JR高崎線）",
+            category: "station",
+            lat: 36.1476,
+            lng: 139.3889,
+            description: "埼玉県北部の中心駅。夏は日本一の暑さで有名。",
+            icon: "🚉",
+            address: "埼玉県熊谷市筑波2丁目",
+            hours: "始発〜終電",
+            phone: "048-521-2851",
+            website: "https://www.jreast.co.jp/",
+            lines: ['takasaki'],
+            nearestStation: '熊谷',
+            walkingMinutes: 0
+        },
+        {
+            id: 84,
+            name: "埼玉県立熊谷高等学校",
+            category: "highschool",
+            lat: 36.1425,
+            lng: 139.3852,
+            description: "県立の伝統ある進学校。応援団が有名。",
+            icon: "🏫",
+            address: "埼玉県熊谷市宮町2-81",
+            hours: "平日 8:30〜17:00",
+            phone: "048-521-0015",
+            website: "https://kumagaya-h.spec.ed.jp/",
+            lines: ['takasaki'],
+            nearestStation: '熊谷',
+            walkingMinutes: 10
+        },
+
+        // ========== その他の高等学校 ==========
+        {
+            id: 85,
+            name: "都立戸山高等学校",
+            category: "highschool",
+            lat: 35.7012,
+            lng: 139.7103,
+            description: "都立の名門進学校。早稲田大学近く。",
+            icon: "🏫",
+            address: "東京都新宿区戸山3-19-1",
+            hours: "平日 8:30〜17:00",
+            phone: "03-3202-4301",
+            website: "https://www.metro.ed.jp/toyama-h/",
+            lines: ['yamanote'],
+            nearestStation: '新宿',
+            walkingMinutes: 20
+        },
+        {
+            id: 86,
+            name: "都立西高等学校",
+            category: "highschool",
+            lat: 35.6711,
+            lng: 139.5744,
+            description: "都立トップクラスの進学校。",
+            icon: "🏫",
+            address: "東京都杉並区宮前4-21-32",
+            hours: "平日 8:30〜17:00",
+            phone: "03-3333-7771",
+            website: "https://www.metro.ed.jp/nishi-h/",
+            lines: ['chuoRapid'],
+            nearestStation: '吉祥寺',
+            walkingMinutes: 20
+        },
+        {
+            id: 87,
+            name: "千葉県立千葉高等学校",
+            category: "highschool",
+            lat: 35.6046,
+            lng: 140.1149,
+            description: "県立の名門進学校。千葉県トップレベル。",
+            icon: "🏫",
+            address: "千葉県千葉市中央区葛城1-5-2",
+            hours: "平日 8:30〜17:00",
+            phone: "043-227-7434",
+            website: "https://cms1.chiba-c.ed.jp/chiba-h/",
+            lines: ['sobuRapid', 'sobuLocal'],
+            nearestStation: '千葉',
+            walkingMinutes: 15
+        },
+        {
+            id: 88,
+            name: "千葉県立船橋高等学校",
+            category: "highschool",
+            lat: 35.7058,
+            lng: 140.0025,
+            description: "県立の名門進学校。部活動も盛ん。",
+            icon: "🏫",
+            address: "千葉県船橋市東船橋6-1-1",
+            hours: "平日 8:30〜17:00",
+            phone: "047-422-2188",
+            website: "https://cms1.chiba-c.ed.jp/funabashi-h/",
+            lines: ['sobuRapid', 'sobuLocal'],
+            nearestStation: '船橋',
+            walkingMinutes: 20
         }
     ]
 };
@@ -751,9 +1499,14 @@ const categoryConfig = {
         icon: "🛍️"
     },
     education: {
-        name: "教育機関",
+        name: "大学",
         color: "#43A047",
         icon: "🎓"
+    },
+    highschool: {
+        name: "高等学校",
+        color: "#66BB6A",
+        icon: "🏫"
     },
     medical: {
         name: "医療機関",

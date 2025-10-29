@@ -72,22 +72,14 @@ function addFacilityMarkers() {
         // マーカーの作成
         const marker = L.marker([facility.lat, facility.lng], { icon: customIcon });
 
-        // 津田沼駅からの距離を計算
-        const distanceFromStation = calculateDistance(
-            tsudanumaData.center.lat,
-            tsudanumaData.center.lng,
-            facility.lat,
-            facility.lng
-        );
-        const walkingTime = Math.ceil(distanceFromStation / 80); // 徒歩80m/分で計算
-
         // ポップアップの内容
-        const popupContent = createPopupContent(facility, category, distanceFromStation, walkingTime);
+        const popupContent = createPopupContent(facility, category);
 
         marker.bindPopup(popupContent, { maxWidth: 350 });
 
-        // マーカーにカテゴリ情報を保存
+        // マーカーにカテゴリと路線情報を保存
         marker.facilityCategory = facility.category;
+        marker.facilityLines = facility.lines || [];
 
         markers.push(marker);
         marker.addTo(markerLayer);
@@ -105,6 +97,13 @@ function setupEventListeners() {
 
     // カテゴリフィルター
     document.querySelectorAll('.category-filter').forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+            filterMarkers();
+        });
+    });
+
+    // 路線フィルター
+    document.querySelectorAll('.line-filter').forEach(checkbox => {
         checkbox.addEventListener('change', () => {
             filterMarkers();
         });
@@ -140,9 +139,26 @@ function filterMarkers() {
         checkedCategories.push(checkbox.value);
     });
 
+    // チェックされている路線を取得
+    const checkedLines = [];
+    document.querySelectorAll('.line-filter:checked').forEach(checkbox => {
+        checkedLines.push(checkbox.value);
+    });
+
     // マーカーの表示/非表示を切り替え
     markers.forEach(marker => {
-        if (checkedCategories.includes(marker.facilityCategory)) {
+        // カテゴリがチェックされているか
+        const categoryMatch = checkedCategories.includes(marker.facilityCategory);
+
+        // 路線がチェックされているか（施設の路線のいずれかがチェックされていればOK）
+        let lineMatch = true; // デフォルトはtrue（路線情報がない施設も表示）
+        if (marker.facilityLines && marker.facilityLines.length > 0) {
+            // 施設に路線情報がある場合のみチェック
+            lineMatch = marker.facilityLines.some(line => checkedLines.includes(line));
+        }
+
+        // カテゴリと路線の両方にマッチする場合のみ表示
+        if (categoryMatch && lineMatch) {
             if (!markerLayer.hasLayer(marker)) {
                 markerLayer.addLayer(marker);
             }
@@ -176,7 +192,7 @@ function resetMapView() {
 }
 
 // ポップアップコンテンツの生成
-function createPopupContent(facility, category, distanceFromStation, walkingTime) {
+function createPopupContent(facility, category) {
     let content = `
         <div class="facility-popup">
             <h3 style="margin: 0 0 10px 0; color: ${category.color};">
@@ -227,16 +243,17 @@ function createPopupContent(facility, category, distanceFromStation, walkingTime
         `;
     }
 
-    // 津田沼駅からの距離と時間
-    content += `
-        <div style="margin: 10px 0; padding: 8px; background: #e3f2fd; border-radius: 4px; border-left: 3px solid ${category.color};">
-            <strong style="font-size: 0.85em;">🚶 津田沼駅から</strong><br>
-            <span style="font-size: 0.85em;">
-                直線距離: ${distanceFromStation < 1000 ? Math.round(distanceFromStation) + 'm' : (distanceFromStation / 1000).toFixed(2) + 'km'}
-                / 徒歩約${walkingTime}分
-            </span>
-        </div>
-    `;
+    // 最寄り駅からの徒歩時間
+    if (facility.nearestStation && facility.walkingMinutes !== undefined) {
+        content += `
+            <div style="margin: 10px 0; padding: 8px; background: #e3f2fd; border-radius: 4px; border-left: 3px solid ${category.color};">
+                <strong style="font-size: 0.85em;">🚶 最寄り駅</strong><br>
+                <span style="font-size: 0.85em;">
+                    ${facility.nearestStation}駅から徒歩約${facility.walkingMinutes}分
+                </span>
+            </div>
+        `;
+    }
 
     // ユーザーの現在地からの距離（取得済みの場合）
     if (userLocation) {
