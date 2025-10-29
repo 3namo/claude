@@ -6,8 +6,6 @@ let markers = [];
 let markerLayer;
 let currentLocationMarker = null;
 let userLocation = null;
-let railwayLinePolylines = {}; // 路線ポリライン
-let railwayLineLayer;
 
 // 地図の初期化
 function initMap() {
@@ -34,12 +32,6 @@ function initMap() {
     currentBaseLayer = baseLayers.osm;
     currentBaseLayer.addTo(map);
 
-    // 路線レイヤーグループの作成（マーカーの下に表示するため先に追加）
-    railwayLineLayer = L.layerGroup().addTo(map);
-
-    // 路線の描画
-    drawRailwayLines();
-
     // マーカーレイヤーグループの作成
     markerLayer = L.layerGroup().addTo(map);
 
@@ -48,35 +40,6 @@ function initMap() {
 
     // イベントリスナーの設定
     setupEventListeners();
-}
-
-// 路線の描画
-function drawRailwayLines() {
-    // routes.jsのrailwayLinesオブジェクトを使用
-    Object.keys(railwayLines).forEach(lineId => {
-        const line = railwayLines[lineId];
-        const stations = Object.values(line.stations);
-
-        // 駅の座標を配列にまとめる
-        const coordinates = stations.map(station => [station.lat, station.lng]);
-
-        // ポリラインの作成
-        const polyline = L.polyline(coordinates, {
-            color: line.color,
-            weight: 4,
-            opacity: 0.7,
-            lineJoin: 'round'
-        });
-
-        // ポップアップの追加（路線名を表示）
-        polyline.bindPopup(`<strong>${line.name}</strong>`);
-
-        // ポリラインを保存
-        railwayLinePolylines[lineId] = polyline;
-
-        // レイヤーに追加
-        polyline.addTo(railwayLineLayer);
-    });
 }
 
 // 施設マーカーの追加
@@ -143,31 +106,7 @@ function setupEventListeners() {
     document.querySelectorAll('.line-filter').forEach(checkbox => {
         checkbox.addEventListener('change', () => {
             filterMarkers();
-            filterRailwayLines();
         });
-    });
-}
-
-// 路線の表示/非表示を切り替え
-function filterRailwayLines() {
-    // チェックされている路線を取得
-    const checkedLines = [];
-    document.querySelectorAll('.line-filter:checked').forEach(checkbox => {
-        checkedLines.push(checkbox.value);
-    });
-
-    // 路線の表示/非表示を切り替え
-    Object.keys(railwayLinePolylines).forEach(lineId => {
-        const polyline = railwayLinePolylines[lineId];
-        if (checkedLines.includes(lineId)) {
-            if (!railwayLineLayer.hasLayer(polyline)) {
-                railwayLineLayer.addLayer(polyline);
-            }
-        } else {
-            if (railwayLineLayer.hasLayer(polyline)) {
-                railwayLineLayer.removeLayer(polyline);
-            }
-        }
     });
 }
 
@@ -508,7 +447,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // コンソールに統計情報を出力
     console.log('首都圏JR路線マップが初期化されました');
     console.log('施設総数:', tsudanumaData.facilities.length);
-    console.log('路線総数:', Object.keys(railwayLines).length);
     console.log('カテゴリ別施設数:', getFacilityCountByCategory());
 });
 
