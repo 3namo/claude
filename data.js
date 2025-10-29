@@ -2086,7 +2086,7 @@ const tsudanumaData = {
             lines: ['keihinTohoku'],
             nearestStation: '北浦和',
             walkingMinutes: 12
-        }
+        },
         // ========== 追加の東京都の大学 (IDs 126-160) ==========
         {
             id: 126,
